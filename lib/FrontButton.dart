@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_33/main.dart';
+import 'main.dart';
+import 'beginner.dart';
 
 double height = 50;
 double width = 170;
@@ -38,7 +41,8 @@ class FrontButtonWidget extends StatelessWidget {
                 ),
               ], color: Colors.blue, borderRadius: BorderRadius.circular(25)),
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      Navigator.of(context).pushReplacementNamed("/question"),
                   child: Text(
                     '初級',
                     style: TextStyle(color: Colors.white, fontSize: 20),

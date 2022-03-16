@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Background(),
+      home: BackGroundImage(),
+      routes: <String, WidgetBuilder>{
+        "/question": (BuildContext context) => Beginner(),
+      },
     );
   }
 }
