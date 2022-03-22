@@ -5,6 +5,7 @@ import 'beginner.dart';
 
 double height = 50;
 double width = 170;
+String gamen = "/question1";
 
 class FrontButtonWidget extends StatelessWidget {
   const FrontButtonWidget({
@@ -42,7 +43,7 @@ class FrontButtonWidget extends StatelessWidget {
               ], color: Colors.blue, borderRadius: BorderRadius.circular(25)),
               child: TextButton(
                   onPressed: () =>
-                      Navigator.of(context).pushReplacementNamed("/question"),
+                      Navigator.of(context).pushReplacementNamed(gamen),
                   child: Text(
                     '初級',
                     style: TextStyle(color: Colors.white, fontSize: 20),

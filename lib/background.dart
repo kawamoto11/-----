@@ -2,74 +2,25 @@ import 'package:flutter/material.dart';
 
 double height2 = 60;
 double width2 = 250;
-
-class Background extends StatelessWidget {
-  const Background({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      child: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: size.height * 0.1,
-            ),
-            Text(
-              'この中で三大栄養素に含まれない\n栄養素は何？',
-              style: TextStyle(fontSize: 30),
-            ),
-            SizedBox(
-              height: size.height * 0.2,
-            ),
-            AnswerWidget(
-              title: '炭水化物',
-              answer: '不正解',
-              serection: Colors.blue,
-            ),
-            SizedBox(
-              height: size.height * 0.025,
-            ),
-            AnswerWidget(
-              title: 'ビタミン',
-              answer: '正解',
-              serection: Colors.red,
-            ),
-            SizedBox(
-              height: size.height * 0.025,
-            ),
-            AnswerWidget(
-              title: 'タンパク質',
-              answer: '不正解',
-              serection: Colors.blue,
-            ),
-            SizedBox(
-              height: size.height * 0.025,
-            ),
-            AnswerWidget(
-              title: '脂質',
-              answer: '不正解',
-              serection: Colors.blue,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+int resulttext = 0;
 
 class AnswerWidget extends StatelessWidget {
   const AnswerWidget({
     Key? key,
+    required this.result,
+    required this.seni,
+    required this.explanation,
     required this.serection,
     required this.answer,
-    required this.title,
+    required this.anstitle,
   }) : super(key: key);
 
-  final String title;
+  final String anstitle;
   final String answer;
   final Color serection;
+  final String explanation;
+  final String seni;
+  final int result;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -95,17 +46,18 @@ class AnswerWidget extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: serection),
                       ),
-                      content: Text('三大栄養素にビタミンとミネラルを加えたものを5大栄養素とよぶよ！'),
+                      content: Text(explanation),
                       actions: [
                         TextButton(
-                            onPressed: () => Navigator.of(context).pop(0),
+                            onPressed: () => Navigator.of(context)
+                                .pushReplacementNamed(seni),
                             child: Text('進む'))
                       ],
                     );
                   });
             },
             child: Text(
-              title,
+              anstitle,
               style: TextStyle(color: Colors.white, fontSize: 20),
             )));
   }

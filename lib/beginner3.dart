@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_33/beginner.dart';
 
 import 'background.dart';
 
-String exptext1 = 'ビタミンは五大栄養素！';
-String problem = 'この中で三大栄養素に含まれない\n栄養素は何？';
-String senibasho = '/question2';
+String exptext1 = '初代大統領のジョージワシントンにちなんでるよ';
+String problem = 'アメリカ合衆国の首都は？';
+String senibasho = '/answer';
 
-class Beginner extends StatelessWidget {
-  const Beginner({Key? key}) : super(key: key);
+class Beginner3 extends StatelessWidget {
+  const Beginner3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,29 @@ class Beginner extends StatelessWidget {
                 result: resulttext,
                 seni: senibasho,
                 explanation: exptext1,
-                anstitle: '炭水化物',
+                anstitle: 'ニューヨーク',
+                answer: '不正解',
+                serection: Colors.blue,
+              ),
+              SizedBox(
+                height: size.height * 0.025,
+              ),
+              AnswerWidget(
+                result: resulttext,
+                seni: senibasho,
+                explanation: exptext1,
+                anstitle: 'サンフランシスコ',
+                answer: '不正解',
+                serection: Colors.blue,
+              ),
+              SizedBox(
+                height: size.height * 0.025,
+              ),
+              AnswerWidget(
+                result: resulttext,
+                seni: senibasho,
+                explanation: exptext1,
+                anstitle: 'ロサンゼルス',
                 answer: '不正解',
                 serection: Colors.blue,
               ),
@@ -42,31 +65,9 @@ class Beginner extends StatelessWidget {
                 result: resulttext++,
                 seni: senibasho,
                 explanation: exptext1,
-                anstitle: 'ビタミン',
+                anstitle: 'ワシントンD.C',
                 answer: '正解',
                 serection: Colors.red,
-              ),
-              SizedBox(
-                height: size.height * 0.025,
-              ),
-              AnswerWidget(
-                result: resulttext,
-                seni: senibasho,
-                explanation: exptext1,
-                anstitle: 'タンパク質',
-                answer: '不正解',
-                serection: Colors.blue,
-              ),
-              SizedBox(
-                height: size.height * 0.025,
-              ),
-              AnswerWidget(
-                result: resulttext,
-                seni: senibasho,
-                explanation: exptext1,
-                anstitle: '脂質',
-                answer: '不正解',
-                serection: Colors.blue,
               ),
             ],
           ),

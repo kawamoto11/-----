@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'background.dart';
 
-String exptext1 = 'ビタミンは五大栄養素！';
-String problem = 'この中で三大栄養素に含まれない\n栄養素は何？';
-String senibasho = '/question2';
+String exptext1 = '吉田茂は戦後の日本を立て直したよ';
+String problem = 'サンフランシスコ条約と\n旧安保条約を結んだ総理大臣は誰？';
+String senibasho = '/question3';
 
-class Beginner extends StatelessWidget {
-  const Beginner({Key? key}) : super(key: key);
+class Beginner2 extends StatelessWidget {
+  const Beginner2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class Beginner extends StatelessWidget {
                 result: resulttext,
                 seni: senibasho,
                 explanation: exptext1,
-                anstitle: '炭水化物',
+                anstitle: '鳩山一郎',
                 answer: '不正解',
                 serection: Colors.blue,
               ),
@@ -42,7 +42,7 @@ class Beginner extends StatelessWidget {
                 result: resulttext++,
                 seni: senibasho,
                 explanation: exptext1,
-                anstitle: 'ビタミン',
+                anstitle: '吉田茂',
                 answer: '正解',
                 serection: Colors.red,
               ),
@@ -53,7 +53,7 @@ class Beginner extends StatelessWidget {
                 result: resulttext,
                 seni: senibasho,
                 explanation: exptext1,
-                anstitle: 'タンパク質',
+                anstitle: '伊藤博文',
                 answer: '不正解',
                 serection: Colors.blue,
               ),
@@ -64,7 +64,7 @@ class Beginner extends StatelessWidget {
                 result: resulttext,
                 seni: senibasho,
                 explanation: exptext1,
-                anstitle: '脂質',
+                anstitle: '池田隼人',
                 answer: '不正解',
                 serection: Colors.blue,
               ),

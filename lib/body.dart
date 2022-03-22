@@ -10,12 +10,11 @@ class BackGroundImage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        // decoration: const BoxDecoration(
-        //image: DecorationImage(
-        //image: AssetImage('logo.png'),
-        //fit: BoxFit.cover,
-        // )
-        //  ),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('images/forest1.jpg'),
+          fit: BoxFit.cover,
+        )),
         child: FrontButtonWidget(size: size),
       ),
     );
